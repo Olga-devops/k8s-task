@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: k8-service
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 81 
